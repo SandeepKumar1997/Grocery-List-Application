@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+
+body {
+  font-size: var(--fs-heading);
+  margin: 0;
+  font-family: "Sen", sans-serif;
+  background-color: #e5e5e5;
+}
+
+:root {
+  --clr-dangerAlert: #f38282;
+  --clr-succesAlert: #95cd41;
+  --clr-headingBackground: #f1ecec;
+  --clr-heading: #6c6565;
+  --clr-Section: #f5f3f3;
+  --clr-buttonhover: #2c272e;
+  --clr-input: #fbfbfb;
+  --clr-boxShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --clr-button: #c4c4c4;
+
+  --ff-family: "Sen", sans-serif;
+
+  --fs-heading: 1.125rem;
+
+  --radius: 2.8125rem;
+  --transition: all 0.3s linear;
+
+  --lineheight-Heading: 2.6875rem;
+  --lineheight-AllText: 1.375rem;
+  --spacing: 0.15rem;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.section-center {
+  width: 95vw;
+  margin: 0 auto;
+  max-width: 40rem;
+  margin-top: 6rem;
+}
+
+.section-center {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50rem;
+  height: auto; */
+  padding: 1rem;
+  background: var(--clr-Section);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.section-center:hover {
+  box-shadow: var(--clr-boxShadow);
+}
+
+.alert {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  /* background-color: var(--clr-dangerAlert); */
+  width: 60%;
+  height: 1.5rem;
+  border-radius: var(--radius);
+  letter-spacing: var(--spacing);
+  text-align: center;
+
+  /* visibility: hidden; */
+}
+
+.alert-danger {
+  background-color: var(--clr-dangerAlert);
+  color: darkred;
+}
+
+.alert-success {
+  background-color: var(--clr-succesAlert);
+}
+
+.grocery-form h3 {
+  background-color: var(--clr-headingBackground);
+  color: var(--clr-heading);
+  text-align: center;
+  font-size: var(--lineheight-Heading);
+  padding: 0.12rem 0;
+}
+
+.form-control {
+  display: flex;
+  padding: 1rem 0;
+  justify-content: center;
+}
+
+#grocery {
+  background-color: var(--clr-input);
+  border: none;
+  line-height: var(--lineheight-AllText);
+  width: 35rem;
+  height: 2.5rem;
+  margin: 0 0.12rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  padding-left: 1rem;
+  color: var(--clr-buttonhover);
+  font-family: var(--ff-family);
+  letter-spacing: var(--spacing);
+}
+
+#grocery:hover {
+  box-shadow: var(--clr-boxShadow);
+}
+
+#grocery::placeholder {
+  color: var(--clr-heading);
+  font-family: var(--ff-family);
+  letter-spacing: var(--spacing);
+}
+
+.submit-btn {
+  height: 2.5rem;
+  width: 5rem;
+  text-align: center;
+  border-radius: var(--radius);
+  border: none;
+  background-color: var(--clr-button);
+  font-family: var(--ff-family);
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+}
+
+.submit-btn:hover {
+  background-color: var(--clr-buttonhover);
+  color: white;
+  box-shadow: var(--clr-boxShadow);
+  cursor: pointer;
+}
+
+.grocery-container {
+  margin-top: 1.2rem;
+  transition: var(--transition);
+  visibility: hidden;
+}
+
+.show-container {
+  visibility: visible;
+}
+
+.grocery-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  transition: var(--transition);
+  padding: 0.25rem 1.5rem;
+  background-color: var(--clr-input);
+  border-radius: var(--radius);
+}
+
+.grocery-item:hover {
+  box-shadow: var(--clr-boxShadow);
+}
+
+.grocery-item:hover .title {
+  color: grey;
+}
+.title {
+  margin-bottom: 0;
+  color: var(--clr-buttonhover);
+  letter-spacing: var(--spacing);
+  line-height: var(--lineheight-AllText);
+  transition: var(--transition);
+  font-size: 1.125rem;
+}
+
+.edit-btn {
+  border: none;
+  background: transparent;
+  color: var(--clr-succesAlert);
+  font-size: 1.125rem;
+  margin: 0 0.125rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  color: darkgreen;
+}
+
+.delete-btn {
+  border: none;
+  background: transparent;
+  color: var(--clr-dangerAlert);
+  font-size: 1.125rem;
+  margin: 0 0.125rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: darkred;
+}
+
+.grocery-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.clear-btn {
+  width: 10rem;
+  height: 2rem;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  border-radius: var(--radius);
+  border: none;
+  background-color: var(--clr-dangerAlert);
+  color: darkred;
+  font-family: var(--ff-family);
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+}
+
+.clear-btn:hover {
+  box-shadow: var(--clr-boxShadow);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 998px) {
+  .section-center {
+    width: 90vw;
+  }
+}
